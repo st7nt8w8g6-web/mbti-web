@@ -14,10 +14,16 @@ import os
 import warnings
 import base64
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
+try:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import matplotlib.font_manager as fm
+except ImportError:
+    matplotlib = None
+    plt = None
+    fm = None
+
 import numpy as np
 import streamlit as st
 
