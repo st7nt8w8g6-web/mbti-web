@@ -20,6 +20,11 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
+try:
+    from kiwipiepy import Kiwi
+except ImportError:
+    Kiwi = None
+
 
 # ============================================================
 # 0-A. 한글 폰트 전역 설정

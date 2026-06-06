@@ -1,3 +1,5 @@
 matplotlib
 numpy
 streamlit
+echo "kiwipiepy" >> requirements.txt
+pip install -r requirements.txt
