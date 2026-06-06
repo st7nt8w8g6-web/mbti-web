@@ -17,12 +17,11 @@ import sys
 import os
 import re
 import warnings
+import subprocess
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-from io import BytesIO
-from IPython.display import display, HTML, Image as IPImage
 
 # Kiwi import (선택사항)
 try:
@@ -32,20 +31,6 @@ try:
 except ImportError:
     kiwi = None
     KIWI_AVAILABLE = False
-
-# ...existing code...
-import re, os, subprocess, warnings
-import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
-
-try:
-    from kiwipiepy import Kiwi
-    kiwi = Kiwi()
-except ImportError:
-    Kiwi = None
-    kiwi = None
 
 
 # ============================================================
