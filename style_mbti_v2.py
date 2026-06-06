@@ -13,7 +13,27 @@
 #  2. 축2(서사형-압축형): 단어 수 기준 상향 (긴 문장 → S, 짧은 문장 → C)
 #  3. 딕셔너리 누락/반영 오류 어휘 보정 및 비율 재조정
 # ============================================================
+import sys
+import os
+import re
+import warnings
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+from io import BytesIO
+from IPython.display import display, HTML, Image as IPImage
 
+# Kiwi import (선택사항)
+try:
+    from kiwipiepy import Kiwi
+    kiwi = Kiwi()
+    KIWI_AVAILABLE = True
+except ImportError:
+    kiwi = None
+    KIWI_AVAILABLE = False
+
+# ...existing code...
 import re, os, subprocess, warnings
 import numpy as np
 import matplotlib
@@ -22,8 +42,10 @@ import matplotlib.font_manager as fm
 
 try:
     from kiwipiepy import Kiwi
+    kiwi = Kiwi()
 except ImportError:
     Kiwi = None
+    kiwi = None
 
 
 # ============================================================
